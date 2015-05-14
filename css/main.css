@@ -12,7 +12,7 @@ html {
   background-color: yellow;
 }
 .seconds-blinker.active {
-  background-color: gray;
+  background-color: #E1E1E1;
 }
 .five-hour-container, .one-hour-container,
 .five-minute-container, .one-minute-container {
@@ -24,6 +24,7 @@ html {
   display: inline-block;
   border: 1px solid red;
   margin: 0 1px;
+  background-color: #E1E1E1;
 }
 
 .first-stripe {
@@ -38,7 +39,8 @@ html {
   height: 2em;
   display: inline-block;
   border: 1px solid green;
-  margin: 0 .08em
+  margin: 0 .08em;
+  background-color: #E1E1E1;
 }
 
 .active {
