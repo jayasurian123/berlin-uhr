@@ -32,6 +32,7 @@
     <div class="one-minute {clock.oneMinuteStripe.active_3 ? 'active': ''} last-stripe"> </div>
   </div>
   <div class="digital-clock"> {this.clock.currentTime} </div>
+
   this.clock = {
     'fiveHourStripe': {},
     'oneHourStripe': {},
@@ -48,7 +49,10 @@
     var seconds = time.getSeconds();
     this.clock.blink_active = (seconds % 2) ? true : false;
 
-    this.clock.currentTime = hours + ' : ' + minutes + ' : ' + seconds;
+    function pluralize (digit) {
+      return (digit < 10) ? '0'+ digit : digit;
+    }
+    this.clock.currentTime = pluralize(hours) + ' : ' + pluralize(minutes) + ' : ' + pluralize(seconds);
 
     for (index = 0; index < 4; index++) {
       this.clock.fiveHourStripe['active_' + index] = index < parseInt(hours / 5) ? true : false;
