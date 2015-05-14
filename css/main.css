@@ -1,17 +1,44 @@
+html {
+  font-size: 100%;
+  margin: 5em auto;
+  max-width: 42em;
+}
+.seconds-blinker {
+  width: 6em;
+  height: 6em;
+  border-radius: 3em;
+  margin: 1em auto;
+  border: .1em solid red;
+  background-color: yellow;
+}
+.seconds-blinker.active {
+  background-color: gray;
+}
+.five-hour-container, .one-hour-container,
+.five-minute-container, .one-minute-container {
+  margin-bottom: .5em;
+}
 .five-hour, .one-hour, .one-minute {
-  width: 2em;
-  height: 2em;
+  width: 10em;
+  height: 4em;
   display: inline-block;
   border: 1px solid red;
   margin: 0 1px;
 }
 
+.first-stripe {
+  border-radius: 15px 0 0 15px;
+}
+.last-stripe {
+  border-radius: 0 15px 15px 0;
+}
+
 .five-minute {
-  width: 0.6em;
+  width: 3.44em;
   height: 2em;
   display: inline-block;
   border: 1px solid green;
-  margin: 0 0.8px
+  margin: 0 .08em
 }
 
 .active {
@@ -25,4 +52,9 @@
 }
 .five-minute:nth-child(3n).active {
   background-color: yellow;
+}
+.digital-clock {
+  font-size: 2em;
+  margin: auto;
+  max-width: 5em;
 }

@@ -1,18 +1,19 @@
 <berlin-clock>
+  <div class="seconds-blinker {clock.blink_active ? 'active' : ''}"> </div>
   <div class="five-hour-container">
-    <div class="five-hour {clock.fiveHourStripe.active_0 ? 'active': ''}"> </div>
+    <div class="five-hour {clock.fiveHourStripe.active_0 ? 'active': ''} first-stripe"> </div>
     <div class="five-hour {clock.fiveHourStripe.active_1 ? 'active': ''}"> </div>
     <div class="five-hour {clock.fiveHourStripe.active_2 ? 'active': ''}"> </div>
-    <div class="five-hour {clock.fiveHourStripe.active_3 ? 'active': ''}"> </div>
+    <div class="five-hour {clock.fiveHourStripe.active_3 ? 'active': ''} last-stripe"> </div>
   </div>
   <div class="one-hour-container">
-    <div class="one-hour {clock.oneHourStripe.active_0 ? 'active': ''}"> </div>
+    <div class="one-hour {clock.oneHourStripe.active_0 ? 'active': ''} first-stripe"> </div>
     <div class="one-hour {clock.oneHourStripe.active_1 ? 'active': ''}"> </div>
     <div class="one-hour {clock.oneHourStripe.active_2 ? 'active': ''}"> </div>
-    <div class="one-hour {clock.oneHourStripe.active_3 ? 'active': ''}"> </div>
+    <div class="one-hour {clock.oneHourStripe.active_3 ? 'active': ''} last-stripe"> </div>
   </div>
   <div class="five-minute-container">
-    <div class="five-minute {clock.fiveMinuteStripe.active_0 ? 'active': ''}"> </div>
+    <div class="five-minute {clock.fiveMinuteStripe.active_0 ? 'active': ''} first-stripe"> </div>
     <div class="five-minute {clock.fiveMinuteStripe.active_1 ? 'active': ''}"> </div>
     <div class="five-minute {clock.fiveMinuteStripe.active_2 ? 'active': ''}"> </div>
     <div class="five-minute {clock.fiveMinuteStripe.active_3 ? 'active': ''}"> </div>
@@ -22,15 +23,15 @@
     <div class="five-minute {clock.fiveMinuteStripe.active_7 ? 'active': ''}"> </div>
     <div class="five-minute {clock.fiveMinuteStripe.active_8 ? 'active': ''}"> </div>
     <div class="five-minute {clock.fiveMinuteStripe.active_9 ? 'active': ''}"> </div>
-    <div class="five-minute {clock.fiveMinuteStripe.active_10 ? 'active': ''}"> </div>
+    <div class="five-minute {clock.fiveMinuteStripe.active_10 ? 'active': ''} last-stripe"> </div>
   </div>
   <div class="one-minute-container">
-    <div class="one-minute {clock.oneMinuteStripe.active_0 ? 'active': ''}"> </div>
+    <div class="one-minute {clock.oneMinuteStripe.active_0 ? 'active': ''} first-stripe"> </div>
     <div class="one-minute {clock.oneMinuteStripe.active_1 ? 'active': ''}"> </div>
     <div class="one-minute {clock.oneMinuteStripe.active_2 ? 'active': ''}"> </div>
-    <div class="one-minute {clock.oneMinuteStripe.active_3 ? 'active': ''}"> </div>
+    <div class="one-minute {clock.oneMinuteStripe.active_3 ? 'active': ''} last-stripe"> </div>
   </div>
-  <div> {this.clock.currentTime} </div>
+  <div class="digital-clock"> {this.clock.currentTime} </div>
   this.clock = {
     'fiveHourStripe': {},
     'oneHourStripe': {},
@@ -45,6 +46,8 @@
     var hours  = time.getHours();
     var minutes = time.getMinutes();
     var seconds = time.getSeconds();
+    this.clock.blink_active = (seconds % 2) ? true : false;
+
     this.clock.currentTime = hours + ' : ' + minutes + ' : ' + seconds;
 
     for (index = 0; index < 4; index++) {
