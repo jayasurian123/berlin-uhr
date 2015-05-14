@@ -1,0 +1,28 @@
+.five-hour, .one-hour, .one-minute {
+  width: 2em;
+  height: 2em;
+  display: inline-block;
+  border: 1px solid red;
+  margin: 0 1px;
+}
+
+.five-minute {
+  width: 0.6em;
+  height: 2em;
+  display: inline-block;
+  border: 1px solid green;
+  margin: 0 0.8px
+}
+
+.active {
+  background-color: red;
+}
+.one-hour.active {
+  background-color: orange;
+}
+.one-minute.active {
+  background-color: yellow;
+}
+.five-minute:nth-child(3n).active {
+  background-color: yellow;
+}

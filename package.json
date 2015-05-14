@@ -1,0 +1,28 @@
+{
+  "name": "berlin-uhr",
+  "version": "0.0.1",
+  "description": "Berlin Uhr",
+  "author": "jay",
+  "contributors": [
+    {
+      "name": "Jayasurian M",
+      "email": "jay@babbel.com",
+      "url": "foobar"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "foobar.git"
+  },
+  "license": "GNU GENERAL PUBLIC LICENSE",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-notify": "^2.2.0",
+    "gulp-riot": "^0.2.14",
+    "gulp-watch": "^4.2.4"
+  },
+  "scripts": {},
+  "dependencies": {
+    "riot": "^2.0.15"
+  }
+}
