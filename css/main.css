@@ -58,5 +58,5 @@ html {
 .digital-clock {
   font-size: 2em;
   margin: auto;
-  max-width: 5em;
+  text-align: center;
 }
