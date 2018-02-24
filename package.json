@@ -2,17 +2,17 @@
   "name": "berlin-uhr",
   "version": "0.0.1",
   "description": "Berlin Uhr",
-  "author": "jay",
+  "author": "jayasurian123",
   "contributors": [
     {
       "name": "Jayasurian M",
-      "email": "jay@babbel.com",
-      "url": "foobar"
+      "email": "jayasurian123@yahoo.com",
+      "url": "http://jayasurian123.github.io/berlin-uhr/"
     }
   ],
   "repository": {
     "type": "git",
-    "url": "foobar.git"
+    "url": "https://github.com/jayasurian123/berlin-uhr.git"
   },
   "license": "GNU GENERAL PUBLIC LICENSE",
   "devDependencies": {
