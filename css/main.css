@@ -25,6 +25,7 @@ html {
 .five-hour-container, .one-hour-container,
 .five-minute-container, .one-minute-container {
   margin-bottom: .5em;
+  text-align: center;
 }
 .five-hour, .one-hour, .one-minute {
   width: 10em;
