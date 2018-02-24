@@ -1,18 +1,26 @@
+:root {
+  --yellow: #f2f258;
+  --red: #eb5151;
+  --blue: #0080ff;
+  --gray: #ededed;
+};
+
 html {
   font-size: 100%;
   margin: 5em auto;
   max-width: 42em;
 }
+
 .seconds-blinker {
   width: 6em;
   height: 6em;
   border-radius: 3em;
   margin: 1em auto;
-  border: .1em solid red;
-  background-color: yellow;
+  border: 1px solid var(--blue);
+  background-color: var(--yellow);
 }
 .seconds-blinker.active {
-  background-color: #E1E1E1;
+  background-color: var(--gray);
 }
 .five-hour-container, .one-hour-container,
 .five-minute-container, .one-minute-container {
@@ -22,7 +30,7 @@ html {
   width: 10em;
   height: 4em;
   display: inline-block;
-  border: 1px solid red;
+  border: 1px solid var(--blue);
   margin: 0 1px;
   background-color: #E1E1E1;
 }
@@ -38,22 +46,22 @@ html {
   width: 3.44em;
   height: 2em;
   display: inline-block;
-  border: 1px solid green;
+  border: 1px solid var(--blue);
   margin: 0 .08em;
   background-color: #E1E1E1;
 }
 
 .active {
-  background-color: red;
+  background-color: var(--red);
 }
 .one-hour.active {
   background-color: orange;
 }
 .one-minute.active {
-  background-color: yellow;
+  background-color: var(--yellow);
 }
 .five-minute:nth-child(3n).active {
-  background-color: yellow;
+  background-color: var(--yellow);
 }
 .digital-clock {
   font-size: 2em;
